@@ -18,6 +18,7 @@ M.colorscheme2dir = {
   catppuccin = "catppuccin",
   onedarkpro = "onedarkpro.nvim",
   monokai = "monokai.nvim",
+  monokainight = "monokai-nightasty.nvim",
   material = "material.nvim",
 }
 
@@ -102,6 +103,11 @@ M.monokai = function()
   vim.cmd('colorscheme monokai_pro')
 end
 
+M.monokainight = function()
+  vim.opt.background = "dark" -- default to dark or light style
+  vim.cmd.colorscheme("monokai-nightasty")
+end
+
 M.material = function ()
   vim.g.material_style = "oceanic"
   vim.cmd('colorscheme material')
@@ -130,3 +136,6 @@ end
 
 -- Load a random colorscheme
 M.rand_colorscheme()
+
+-- default colorscheme
+M.monokainight()
